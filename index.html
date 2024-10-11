@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн САПР для електричних схем</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="toolbar">
+        <button id="resistor" class="tool-btn" title="Резистор">R</button>
+        <button id="capacitor" class="tool-btn" title="Конденсатор">C</button>
+        <button id="inductor" class="tool-btn" title="Котушка індуктивності">L</button>
+        <button id="wire" class="tool-btn" title="Провідник">—</button>
+        <div class="separator"></div>
+        <button id="undo" class="action-btn" title="Назад">↩️</button>
+        <button id="redo" class="action-btn" title="Вперед">↪️</button>
+        <div class="separator"></div>
+        <button id="save" class="action-btn" title="Зберегти схему">💾</button>
+        <button id="load" class="action-btn" title="Завантажити схему">📂</button>
+    </div>
+    <div id="status-bar">
+        <span id="current-tool">Поточний інструмент: Немає</span>
+    </div>
+    <canvas id="canvas"></canvas>
+    <input type="file" id="load-file" style="display: none;">
+
+    <div id="componentModal" class="modal">
+        <div class="modal-content">
+            <h2>Редагувати компонент</h2>
+            <input type="text" id="componentValue" placeholder="Значення">
+            <button id="saveComponentValue">Зберегти</button>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
